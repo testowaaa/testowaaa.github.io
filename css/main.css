@@ -1,0 +1,236 @@
+body {
+  margin: 0 auto;
+  background: black;
+  user-select: none; }
+
+* {
+  user-select: none; }
+
+.position-left, .position-right {
+  position: absolute;
+  top: 1rem;
+  display: flex; }
+
+.caption {
+  justify-content: center;
+  display: flex;
+  color: #fafaff;
+  font-family: 'Indie Flower', cursive; }
+
+.position-left {
+  align-self: flex-start;
+  left: 0.5rem; }
+
+.position-right {
+  align-self: flex-end;
+  right: 0.5rem; }
+
+.subheading {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: inherit; }
+
+.heading {
+  background: inherit;
+  color: inherit;
+  letter-spacing: 0.27rem;
+  font-size: 2.2rem;
+  margin: 0; }
+
+.main-header {
+  color: #fafaff;
+  display: flex;
+  flex-direction: column;
+  background: inherit; }
+
+.game {
+  background: black;
+  height: auto;
+  width: 100%;
+  box-sizing: content-box;
+  padding: 0.5rem 0; }
+
+.playground {
+  justify-content: center;
+  display: flex;
+  flex-flow: wrap row; }
+
+break {
+  flex-basis: 100%;
+  width: 0px;
+  height: 0px;
+  overflow: hidden; }
+
+.field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31vw;
+  height: 31vw;
+  flex-wrap: nowrap;
+  cursor: pointer; }
+
+.first-column,
+.second-column {
+  border-right: 3px solid white; }
+
+.first-row,
+.second-row {
+  border-bottom: 3px solid white; }
+
+.cross {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cross::after, .cross::before {
+    border-radius: 10px;
+    position: absolute;
+    height: 5rem;
+    border: 0.6rem solid white;
+    content: " ";
+    margin: 0; }
+  .cross::after {
+    transform: rotate(45deg); }
+  .cross::before {
+    transform: rotate(-45deg); }
+
+.circle {
+  display: flex;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border: 0.7rem solid white;
+  border-radius: 9999rem; }
+
+.ending-footer {
+  background: black;
+  width: 100%;
+  color: #fafaff;
+  font-family: 'Jua', sans-serif; }
+  .ending-footer .score {
+    display: flex;
+    justify-content: center;
+    margin: 0 30%;
+    padding: 0.5rem 0 0 0;
+    flex-wrap: nowrap; }
+    .ending-footer .score > div:first-child {
+      display: flex;
+      padding-right: 2.5rem; }
+    .ending-footer .score > div {
+      display: flex; }
+  .ending-footer label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto; }
+  .ending-footer form {
+    display: flex; }
+
+.button {
+  background: transparent;
+  border-color: transparent;
+  height: 2rem;
+  display: flex;
+  justify-content: center; }
+
+@media screen and (min-width: 768px) {
+  .circle {
+    width: 7rem;
+    height: 7rem;
+    border: 1rem solid white; }
+
+  .cross::before, .cross::after {
+    border: 0.7rem solid white;
+    height: 9.5rem; }
+
+  body {
+    font-size: 1.5rem; }
+
+  .field {
+    width: 25vw;
+    height: 25vw; }
+
+  .ending-footer {
+    padding-top: 1rem; }
+
+  .caption {
+    font-size: 2rem; }
+
+  .heading {
+    font-size: 4rem; }
+
+  .button {
+    font-size: 1.5rem; } }
+@media screen and (min-width: 1024px) {
+  .cross::after, .cross::before {
+    height: 5rem;
+    border: 0.6rem solid white; }
+
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    border: 0.7rem solid white; }
+
+  body {
+    font-size: 1.4rem; }
+
+  .field {
+    width: 9vw;
+    height: 9vw; }
+
+  .caption {
+    font-size: 1rem; }
+
+  .heading {
+    font-size: 3rem; }
+
+  .subheading {
+    font-size: 1.3rem; }
+
+  .button {
+    font-size: 1.5rem; } }
+.borderFlash {
+  animation-name: borderFlash;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  animation-timing-function: linear; }
+
+.active {
+  color: #96969b; }
+
+.animated {
+  transition-duration: 2s; }
+
+.white {
+  border-color: black;
+  color: black;
+  background: white; }
+  .white > .circle, .white .cross::before, .white .cross::after {
+    border-color: black; }
+  .white .first-column,
+  .white .second-column {
+    border-color: black; }
+  .white .first-row,
+  .white .second-row {
+    border-color: black; }
+  .white span::before {
+    color: black; }
+
+label {
+  cursor: pointer; }
+  label > button {
+    cursor: pointer; }
+    label > button span {
+      cursor: pointer; }
+      label > button span::before {
+        cursor: pointer; }
+
+@keyframes borderFlash {
+  25% {
+    border-color: white; }
+  50% {
+    border-color: black; }
+  100% {
+    border-color: white; } }
+
+/*# sourceMappingURL=main.css.map */
